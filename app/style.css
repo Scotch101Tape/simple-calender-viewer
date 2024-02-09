@@ -1,0 +1,49 @@
+
+* {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+  background-color: aquamarine;
+}
+
+.day {
+  background-color: white;
+  border-width: 0px;
+  border-style: solid;
+  border-top-width: 2px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+}
+
+.month {
+  margin-bottom: 10px;
+  border-style: solid;
+  border-width: 4px;
+}
+
+.month-title {
+  background-color: darkseagreen;
+  color: black;
+  font-weight: bold;
+  font-size: larger;
+  padding: 5px
+}
+
+.now-day {
+  background-color: pink;
+}
+
+.past-day {
+  background-color: grey;
+}
+
+.day-number {
+  font-weight: bold;
+}
+
+.day-events {
+  margin-left: 10px;
+  margin-top: 5px;
+}
