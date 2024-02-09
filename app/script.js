@@ -60,7 +60,13 @@ function createDay({year, month, day}, events) {
       <div class="day-number">${day} ${dayOfWeek({year, month, day})}</div>
       ${dayEvents == undefined ? "" : `
         <div class="day-events">
-          ${dayEvents.map(event => "- " + event.text + "<br>").reduce((acc, val) => acc + val, "")}
+          ${dayEvents.map(event => {
+            const done = event.done
+              return `
+                - ${done ? "<s>" : ""}${event.text}${done ? "</s>" : ""} <br>
+              `
+            })
+            .reduce((acc, val) => acc + val, "")}
         </div>
       `}
     </div>
