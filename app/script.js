@@ -1,4 +1,4 @@
-const MONTHS_IN_ADVANCE = 12
+const MONTHS_IN_ADVANCE = 6
 
 const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 const DAYS_OF_WEEK = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
@@ -57,7 +57,7 @@ function createDay({year, month, day}, events) {
   // Add the text - it looks like react ;)
   dayDiv.innerHTML = `
     </div>
-      <div class="day-number">${day} ${dayOfWeek({year, month, day})}</div>
+      <div class="day-number">${MONTHS[month - 1]} ${day} - ${dayOfWeek({year, month, day})}</div>
       ${dayEvents == undefined ? "" : `
         <div class="day-events">
           ${dayEvents.map(event => {
